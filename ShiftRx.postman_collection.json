@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "874780d6-c89c-44bf-8567-5aa121eb5c56",
+		"name": "ShiftRx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32526012",
+		"_collection_link": "https://bold-spaceship-500607.postman.co/workspace/Thru-AI~c96dd582-9a4f-4190-b0ac-5261cbfce947/collection/32526012-874780d6-c89c-44bf-8567-5aa121eb5c56?action=share&source=collection_link&creator=32526012"
+	},
+	"item": [
+		{
+			"name": "Auction",
+			"item": [
+				{
+					"name": "Get All Auctions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Auctions By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiJkOGVjNGQ1Mi05ZjZiLTQxYTQtOTI0MS1iNDViYzBkOTI4ZTEiLCJpYXQiOjE3MjAyMzIxMTksImV4cCI6MTcyMDIzNTcxOX0.62IhgLXibvtoxmCZnHa9c9Ra0_NI3vUcHZDE75DS9tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiIxZWM5ZmMxYS0xOTQxLTRkMTYtODNhMy01ODZiMzA5NjYzMDAiLCJpYXQiOjE3MjAyMDk4ODMsImV4cCI6MTcyMDIwOTk0M30.7R59Rnr6SpeNyEk68RT_OENRfEFIQLPb1-WOcFfUdKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction/5a6dde92-84dd-4362-aa5b-8468039ac7df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"5a6dde92-84dd-4362-aa5b-8468039ac7df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auction With Bids",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction/ced19770-f4fc-44e9-8bac-c64a90bfd811/bids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"ced19770-f4fc-44e9-8bac-c64a90bfd811",
+								"bids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiJkOGVjNGQ1Mi05ZjZiLTQxYTQtOTI0MS1iNDViYzBkOTI4ZTEiLCJpYXQiOjE3MjAyMzIxMTksImV4cCI6MTcyMDIzNTcxOX0.62IhgLXibvtoxmCZnHa9c9Ra0_NI3vUcHZDE75DS9tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction/bids/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"bids",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Auction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiJkOGVjNGQ1Mi05ZjZiLTQxYTQtOTI0MS1iNDViYzBkOTI4ZTEiLCJpYXQiOjE3MjAyMzIxMTksImV4cCI6MTcyMDIzNTcxOX0.62IhgLXibvtoxmCZnHa9c9Ra0_NI3vUcHZDE75DS9tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"second auction\",\n    \"startingPrice\": 100,\n    \"endTime\": \"2024-12-31T23:59:59Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Auction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"first auction\",\n    \"description\": \"update first auction\",\n    \"endTime\": \"2024-12-31T23:59:59Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auction/c7aa0857-a372-4923-b782-62c0f5bfa08b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"c7aa0857-a372-4923-b782-62c0f5bfa08b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Auction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auction/c7aa0857-a372-4923-b782-62c0f5bfa08b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"c7aa0857-a372-4923-b782-62c0f5bfa08b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Bid To Auction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiJkOGVjNGQ1Mi05ZjZiLTQxYTQtOTI0MS1iNDViYzBkOTI4ZTEiLCJpYXQiOjE3MjAyMzIxMTksImV4cCI6MTcyMDIzNTcxOX0.62IhgLXibvtoxmCZnHa9c9Ra0_NI3vUcHZDE75DS9tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 300\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auction/ced19770-f4fc-44e9-8bac-c64a90bfd811/bid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auction",
+								"ced19770-f4fc-44e9-8bac-c64a90bfd811",
+								"bid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"shiftrx\",\n    \"password\": \"shiftrx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"shiftrx\",\n    \"password\": \"shiftrx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWZ0cngiLCJzdWIiOiJkOGVjNGQ1Mi05ZjZiLTQxYTQtOTI0MS1iNDViYzBkOTI4ZTEiLCJpYXQiOjE3MjAyMzIxMTksImV4cCI6MTcyMDIzNTcxOX0.62IhgLXibvtoxmCZnHa9c9Ra0_NI3vUcHZDE75DS9tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
