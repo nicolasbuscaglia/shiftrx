@@ -35,11 +35,11 @@ This README provides instructions on how to set up and run the ShiftRX project u
 
 This command will:
 
-    Build the Docker images for the frontend and backend services using their respective Dockerfiles.
+ - Build the Docker images for the frontend and backend services using their respective Dockerfiles.
 
-    Pull the postgres:15 image for the db service.
+ - Pull the postgres:15 image for the db service.
 
-    Start all the services and link them together as defined in the docker-compose.yml file.
+ - Start all the services and link them together as defined in the docker-compose.yml file.
 
 3. Access the Services
 
