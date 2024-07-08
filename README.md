@@ -1,4 +1,5 @@
-ShiftRX Test Project
+## ShiftRX Test Project
+
 This README provides instructions on how to set up and run the ShiftRX project using Docker Compose. The project consists of three main services: frontend, backend, and db (PostgreSQL database).
 
 ## Prerequisites
