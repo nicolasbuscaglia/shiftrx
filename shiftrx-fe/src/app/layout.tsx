@@ -5,6 +5,7 @@ import { Providers } from "../redux/provider";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthProvider";
 import { Header } from "@/components/Header";
+import { SocketProvider } from "./context/SocketContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,10 @@ export default function RootLayout({
       <body className={`${inter.className} `}>
         <Providers>
           <AuthProvider>
-            <Header />
-            <main>{children}</main>
+            <SocketProvider>
+              <Header />
+              <main>{children}</main>
+            </SocketProvider>
             <Toaster />
           </AuthProvider>
         </Providers>

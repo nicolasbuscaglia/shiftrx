@@ -1,10 +1,11 @@
 "use client";
 import {
+  auctionApi,
   useDeleteAuctionMutation,
   useGetByIdQuery,
 } from "@/redux/services/auctionApi";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import moment from "moment";
 import {
   CalendarDaysIcon,
@@ -17,13 +18,30 @@ import { useParams, useRouter } from "next/navigation";
 import BidForm from "@/components/bid/BidForm";
 import BidCard from "@/components/bid/BidCard";
 import AuctionDetails from "@/components/auction/AuctionDetails";
+import { useSocket } from "@/app/context/SocketContext";
+import { useDispatch } from "react-redux";
 
 const Auction = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const { socket } = useSocket();
   const { auctionId } = useParams();
   const { data: auction, isLoading } = useGetByIdQuery({ auctionId });
   const [deleteAuction, { isLoading: isDeleteLoading }] =
     useDeleteAuctionMutation();
+
+  useEffect(() => {
+    socket.current?.on("new-bid", () => {
+      dispatch(
+        auctionApi.util.invalidateTags([
+          "auctions",
+          "auction",
+          "auctions-user",
+          "bids-user",
+        ])
+      );
+    });
+  }, [socket]);
 
   const handleDelete = async () => {
     const { data } = await deleteAuction({ auctionId });
@@ -36,7 +54,7 @@ const Auction = () => {
         <div className="flex items-center gap-1 pl-1">
           <ChevronLeftIcon className="h-4 w-4" />
           <Link href="/">
-            <div className="text-sm">Auctions</div>
+            <div className="text-sm">Auction</div>
           </Link>
         </div>
         <div className="flex items-center justify-between">

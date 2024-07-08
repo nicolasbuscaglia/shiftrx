@@ -19,12 +19,14 @@ import { CreateBidDto } from '../bid/dto/create-bid.dto';
 import { BidService } from '../bid/bid.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { RequestWithUser } from '../auth/types/auth.types';
+import { AuctionGateway } from './auction.gateway';
 
 @Controller('auction')
 export class AuctionController {
   constructor(
     private readonly auctionService: AuctionService,
     private readonly bidService: BidService,
+    private readonly auctionGateway: AuctionGateway,
   ) {}
 
   @Get()
@@ -152,9 +154,13 @@ export class AuctionController {
 
     await this.bidService.create(bid);
 
-    return await this.auctionService.update({
+    const updatedAuction = await this.auctionService.update({
       where: { id: auctionId },
       data: { currentPrice: amount },
     });
+
+    this.auctionGateway.notify('new-bid', { updatedAuction });
+
+    return updatedAuction;
   }
 }
