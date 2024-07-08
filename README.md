@@ -50,12 +50,13 @@ This command will:
 
 4. Test Users
 
-After running the Docker Compose, a seed script is executed to populate the database with test data.
+   After running the Docker Compose, a seed script is executed to populate the database with test data.
 
-username **user1** password **password1**
-username **user2** password **password2**
+   username **user1** password **password1**
 
-A WebSocket is implemented to update the auction and bids in real-time whenever a new bid is placed by any user. Please test this functionality using two different browsers with separate test user accounts.
+   username **user2** password **password2**
+
+   A WebSocket is implemented to update the auction and bids in real-time whenever a new bid is placed by any user. Please test this functionality using two different browsers with separate test user accounts.
 
 ## Notes
 
