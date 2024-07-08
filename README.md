@@ -58,6 +58,8 @@ This command will:
 
    A WebSocket is implemented to update the auction and bids in real-time whenever a new bid is placed by any user. Please test this functionality using two different browsers with separate test user accounts.
 
+   In the root folder you can find a Postman collection with endpoint details.
+
 ## Notes
 
 The postgres_data volume is used to persist the database data.
